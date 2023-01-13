@@ -202,6 +202,40 @@ double v1[]={
 
 int longitud=sizeof(v1)/sizeof(v1[0]);
 
-printf("el tamaño del vector es: %d",longitud);
+printf("El tamano del vector es: %d\n\n",longitud);
+mayor(v1, longitud);
+menor(v1, longitud);
 
+
+}
+
+
+void mayor (double v1[], int longitud){
+
+    double mayo=v1[0];
+    int posicion=0;
+    int x;
+    for (x=1; x<longitud;x++){
+        if (v1[x]>mayo){
+            mayo=v1[x];
+            posicion=x;
+        }
+    }
+    printf("\nEl mayor elemento es: %lf\n Y su indice es %d\n", mayo, posicion);
+
+}
+
+
+void menor (double v1[], int longitud){
+
+    double meno=v1[0];
+    int posicion=0;
+    int y;
+    for (y=1; y<longitud; y++){
+        if(v1[y]<meno){
+            meno=v1[y];
+            posicion=y;
+        }
+    }
+    printf("\nEl menor elemento es: %lf\n Y su indice es: %d\n\n", meno, posicion);
 }
